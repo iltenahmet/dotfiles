@@ -986,6 +986,7 @@ require('telescope').setup {
       },
     },
     layout_strategy = 'vertical',
+    dynamic_preview_title = true,
   },
 }
 
