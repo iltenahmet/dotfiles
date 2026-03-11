@@ -1,2 +1,4 @@
 node_modules
-bin/opencode
+package.json
+bun.lock
+.gitignore
