@@ -1844,7 +1844,7 @@ tab_bar_edge top
 #: background_opacity. If you want to use both, you are probably
 #: better off just hiding the titlebar with hide_window_decorations.
 
-# macos_option_as_alt no
+macos_option_as_alt yes
 
 #: Use the Option key as an Alt key on macOS. With this set to no,
 #: kitty will use the macOS native Option+Key to enter Unicode
@@ -2690,6 +2690,7 @@ bold_italic_font auto
 
 
 # BEGIN_KITTY_THEME
-# Adwaita darker
+# Carbonfox
 include current-theme.conf
 # END_KITTY_THEME
+map shift+enter send_text all \e\r
