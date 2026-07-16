@@ -204,6 +204,7 @@ require('lazy').setup({
           },
         } or {},
         virtual_text = {
+          severity = vim.diagnostic.severity.ERROR,
           source = 'if_many',
           spacing = 2,
           format = function(diagnostic)
@@ -246,6 +247,20 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+
+        -- python-lsp-server: the E501 "line too long" spam comes from its
+        -- pycodestyle plugin, which defaults to 79 chars and ignores the
+        -- project's ruff config (line-length = 150). Match it to 150 so it
+        -- stops nagging; ruff remains the real linter.
+        pylsp = {
+          settings = {
+            pylsp = {
+              plugins = {
+                pycodestyle = { maxLineLength = 150 },
+              },
+            },
+          },
+        },
 
         lua_ls = {
           -- cmd = { ... },
@@ -330,6 +345,13 @@ require('lazy').setup({
         topdelete = { text = '‾' },
         changedelete = { text = '~' },
       },
+      -- Show the git author/date of the current line inline (toggle: <leader>tb)
+      current_line_blame = true,
+      current_line_blame_opts = {
+        virt_text_pos = 'eol',
+        delay = 300,
+      },
+      current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>',
       on_attach = function(bufnr)
         local gs = package.loaded.gitsigns
 
@@ -448,6 +470,7 @@ require('lazy').setup({
   {
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
+    branch = 'master',
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
@@ -572,7 +595,7 @@ require('lazy').setup({
           annotation = { italic = true },
           tag_attribute = { italic = true }, -- attribute of tag in reactjs
         },
-        filter = "pro",                    -- classic | octagon | pro | machine | ristretto | spectrum
+        filter = "classic",                -- classic | octagon | pro | machine | ristretto | spectrum
         -- Enable this will disable filter option
         day_night = {
           enable = false,          -- turn off by default
@@ -853,7 +876,6 @@ vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.linebreak = true
 vim.o.expandtab = true -- automatic conversion of tab character to spaces
-vim.o.colorcolumn = '80'
 
 --Ahmet - keymaps
 --vim.keymap.set('n','<leader>n','<C-w><C-w>', {desc = '[N]ext Window'})
@@ -1193,9 +1215,7 @@ cmp.setup {
   },
 }
 
-vim.cmd.colorscheme("ayu-dark")
--- ayu-dark specific config
--- vim.api.nvim_set_hl(0, 'LineNr', { fg = '#636A72' })
+vim.cmd.colorscheme("monokai-pro")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
