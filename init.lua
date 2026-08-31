@@ -713,6 +713,14 @@ require('lazy').setup({
     name = "rose-pine",
   },
   {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      style = "night",
+    },
+  },
+  {
     "EdenEast/nightfox.nvim",
   },
   {
@@ -1215,7 +1223,20 @@ cmp.setup {
   },
 }
 
-vim.cmd.colorscheme("monokai-pro")
+local function apply_colorscheme()
+  if vim.o.background == 'light' then
+    vim.cmd.colorscheme('gruvbox')
+  else
+    vim.cmd.colorscheme('gruvbox')
+  end
+end
+
+apply_colorscheme()
+
+vim.api.nvim_create_autocmd('OptionSet', {
+  pattern = 'background',
+  callback = apply_colorscheme,
+})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
