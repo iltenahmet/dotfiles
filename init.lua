@@ -635,6 +635,11 @@ require('lazy').setup({
     end,
   },
   {
+    'duarteocarmo/cursor-themes',
+    lazy = false,
+    priority = 1000,
+  },
+  {
     "ellisonleao/gruvbox.nvim",
     priority = 1000,
     config = true,
@@ -1225,9 +1230,9 @@ cmp.setup {
 
 local function apply_colorscheme()
   if vim.o.background == 'light' then
-    vim.cmd.colorscheme('gruvbox')
+    vim.cmd.colorscheme('cursor-light')
   else
-    vim.cmd.colorscheme('gruvbox')
+    vim.cmd.colorscheme('cursor-dark')
   end
 end
 
