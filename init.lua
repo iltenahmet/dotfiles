@@ -53,7 +53,8 @@ require('lazy').setup({
       { 'j-hui/fidget.nvim', opts = {} },
 
       -- Allows extra capabilities provided by blink.cmp
-      'saghen/blink.cmp',
+      -- v2 needs nvim 0.12+; stay on v1 until then
+      { 'saghen/blink.cmp', version = '1.*' },
     },
     config = function()
       -- Brief aside: **What is LSP?**
