@@ -1,0 +1,6 @@
+theme = light:Cursor Light,dark:Cursor Dark
+
+# Ring when apps emit BEL (e.g. Cursor agent waiting for input).
+# system = macOS alert sound; title = prepend 🔔 to the tab until focused/typed.
+bell-features = system,title
+

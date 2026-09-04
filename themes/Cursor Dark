@@ -1,0 +1,26 @@
+# Cursor Dark — official Anysphere palette from Cursor.app
+# Colors with alpha are blended onto the terminal background.
+
+background = #141414
+foreground = #f0f0f0
+cursor-color = #f0f0f0
+cursor-text = #141414
+selection-background = #2e2e2e
+selection-foreground = #f0f0f0
+
+palette = 0=#242424
+palette = 1=#fc6b83
+palette = 2=#3fa266
+palette = 3=#d2943e
+palette = 4=#81a1c1
+palette = 5=#b48ead
+palette = 6=#88c0d0
+palette = 7=#f0f0f0
+palette = 8=#989898
+palette = 9=#fc6b83
+palette = 10=#70b489
+palette = 11=#f1b467
+palette = 12=#87a6c4
+palette = 13=#b48ead
+palette = 14=#88c0d0
+palette = 15=#ffffff
