@@ -4,3 +4,5 @@ theme = light:Cursor Light,dark:Cursor Dark
 # system = macOS alert sound; title = prepend 🔔 to the tab until focused/typed.
 bell-features = system,title
 
+split-divider-color = #333333
+
