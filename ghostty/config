@@ -1,0 +1,33 @@
+theme = light:Cursor Light,dark:Cursor Dark
+
+# Ring when apps emit BEL (e.g. Cursor agent waiting for input).
+# system = macOS alert sound; title = prepend 🔔 to the tab until focused/typed.
+bell-features = system,title
+
+split-divider-color = #333333
+
+# Cmd keys send tmux keys (Ctrl-b, then the tmux key).
+# tmux windows (tabs)
+keybind = super+digit_1=text:\x021
+keybind = super+digit_2=text:\x022
+keybind = super+digit_3=text:\x023
+keybind = super+digit_4=text:\x024
+keybind = super+digit_5=text:\x025
+keybind = super+digit_6=text:\x026
+keybind = super+digit_7=text:\x027
+keybind = super+digit_8=text:\x028
+keybind = super+digit_9=text:\x029
+keybind = super+shift+[=text:\x02p
+keybind = super+shift+]=text:\x02n
+keybind = super+t=text:\x02c
+
+# tmux panes
+keybind = super+alt+arrow_left=text:\x02\x1b[D
+keybind = super+alt+arrow_right=text:\x02\x1b[C
+keybind = super+alt+arrow_up=text:\x02\x1b[A
+keybind = super+alt+arrow_down=text:\x02\x1b[B
+keybind = super+]=text:\x02o
+keybind = super+d=text:\x02%
+keybind = super+shift+d=text:\x02\x22
+keybind = super+w=text:\x02x
+
