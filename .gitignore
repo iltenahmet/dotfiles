@@ -1,0 +1,10 @@
+# This repo lives at ~/.config. Ignore everything, then allow the tracked configs.
+/*
+!/.gitignore
+!/README.md
+!/nvim/
+!/ghostty/
+!/tmux/
+!/zsh/
+!/opencode/
+!/kitty/
