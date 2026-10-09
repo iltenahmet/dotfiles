@@ -123,7 +123,7 @@ alias s='cd ~/sentience/Sentience'
 alias cc='claude --dangerously-skip-permissions'
 alias ag='agy --dangerously-skip-permissions'
 alias oc='opencode --auto'
-alias ca='agent'
+alias ca='agent' # cursor agent
 alias lg='lazygit'
 eval "$(mise activate zsh)"
 
