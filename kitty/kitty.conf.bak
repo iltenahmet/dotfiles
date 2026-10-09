@@ -16,7 +16,7 @@ map cmd+8 goto_tab 8
 map cmd+9 goto_tab 9
 
 # https://www.reddit.com/r/neovim/comments/qqf4nn/psa_you_can_use_neovim_as_the_kitty_terminal/
-scrollback_pager nvim --noplugin -u ~/.config/kitty/scrollback-pager/nvim/init.vim -c "silent write! /tmp/kitty_scrollback_buffer | te cat /tmp/kitty_scrollback_buffer - "
+scrollback_pager nvim -c "silent write! /tmp/kitty_scrollback_buffer | te cat /tmp/kitty_scrollback_buffer - "
 
 # vim:fileencoding=utf-8:foldmethod=marker
 
@@ -2690,7 +2690,7 @@ bold_italic_font auto
 
 
 # BEGIN_KITTY_THEME
-# Carbonfox
+# Gruvbox Dark Hard
 include current-theme.conf
 # END_KITTY_THEME
 map shift+enter send_text all \e\r
