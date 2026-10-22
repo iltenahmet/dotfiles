@@ -20,6 +20,10 @@ keybind = super+digit_9=text:\x029
 keybind = super+shift+[=text:\x02p
 keybind = super+shift+]=text:\x02n
 keybind = super+t=text:\x02c
+keybind = super+l=text:\x02w
+keybind = super+r=text:\x02,
+keybind = super+shift+arrow_left=text:\x02\x1b[1;2D
+keybind = super+shift+arrow_right=text:\x02\x1b[1;2C
 
 # tmux panes
 keybind = super+alt+arrow_left=text:\x02\x1b[D
