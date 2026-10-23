@@ -1230,20 +1230,8 @@ cmp.setup {
   },
 }
 
-local function apply_colorscheme()
-  if vim.o.background == 'light' then
-    vim.cmd.colorscheme('cursor-light')
-  else
-    vim.cmd.colorscheme('cursor-dark')
-  end
-end
-
-apply_colorscheme()
-
-vim.api.nvim_create_autocmd('OptionSet', {
-  pattern = 'background',
-  callback = apply_colorscheme,
-})
+vim.o.background = 'dark'
+vim.cmd.colorscheme('gruvbox')
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
